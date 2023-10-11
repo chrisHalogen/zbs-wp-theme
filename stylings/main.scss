@@ -12,8 +12,9 @@ $main-color: #414141;
 $soft-color: #b1b1b1;
 
 // Theme Color
-$theme-color: #0c3970;
-$theme-color-2: #eaaa00;
+$theme-color: #001d3d;
+$theme-color-2: #65c979;
+$theme-color-aux: #3e7d4b;
 
 $breakpoint-480: 480px;
 $breakpoint-600: 600px;
@@ -160,10 +161,17 @@ section.top-most {
   .inner-container {
     @include inner-box();
     @include flex-container();
+    @include below-600() {
+      justify-content: center;
+    }
 
     p {
       color: #ffffff;
       @include regular-text();
+
+      @include below-600() {
+        text-align: center;
+      }
 
       span {
         color: $theme-color-2;
@@ -174,6 +182,10 @@ section.top-most {
       display: flex;
       justify-content: space-between;
       gap: 0.75rem;
+
+      @include below-600() {
+        display: none;
+      }
 
       .icon {
         width: 1.5rem;
@@ -379,6 +391,8 @@ section.navigation {
             border-radius: 0 0 0.5rem 0.5rem;
             background-color: #ffffff;
 
+            transition: display 0.25s ease-in-out;
+
             li {
               display: block;
               margin: 0;
@@ -443,12 +457,19 @@ section.navigation {
     display: block;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -20rem;
     height: 100vh;
     overflow-y: auto;
     background-color: #ffffff;
     width: 20rem;
+    height: 100vh;
     padding: 1.5rem;
+    transition: left 0.25s ease;
+
+    &.open {
+      left: 0;
+      transition: left 0.25s ease;
+    }
 
     /* width */
     &::-webkit-scrollbar {
@@ -477,6 +498,7 @@ section.navigation {
       i {
         color: $theme-color;
         font-size: 2rem;
+        cursor: pointer;
       }
       // & + .spacer {
       //   @include spacer();
@@ -632,14 +654,17 @@ section.navigation {
           ul {
             padding-left: 2rem;
             overflow-y: hidden;
+            max-height: 0;
             height: 0;
             // transition: 0.25s ease;
-            transition: height 0.2s ease;
+            transition: max-height 0.2s ease;
 
             &.open {
               // animation: openMobileSubMenu 0.2s forwards;
               // Works for direct values but not max-content. I need to be able to set this dynamically cos we might have more sub menus
-              height: 200px;
+
+              height: fit-content;
+              transition: max-height 0.2s ease;
             }
           }
 
@@ -649,5 +674,177 @@ section.navigation {
         }
       }
     }
+  }
+}
+
+main.page-content {
+  height: 400px;
+}
+
+footer {
+  @include outer-box();
+  background-color: $soft-bg;
+
+  .inner-container {
+    @include inner-box();
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 3fr 3fr 2fr;
+
+    @include below-1200() {
+      gap: 1.5rem;
+    }
+
+    @include below-900() {
+      grid-template-columns: 1fr;
+    }
+
+    .spacer-0 {
+      height: 2rem;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      color: $theme-color;
+      @include font-playfair();
+
+      @include below-1200() {
+        font-size: 2rem;
+      }
+    }
+
+    .col-1 {
+      @include below-900() {
+        margin-bottom: 2rem;
+      }
+      img {
+        width: 100%;
+        max-width: 30rem;
+      }
+      .spacer-1 {
+        height: 1rem;
+      }
+      .spacer-2 {
+        height: 3rem;
+      }
+      p.about-content {
+        font-size: 1.25rem;
+        color: $theme-color;
+        @include below-1200() {
+          font-size: 1rem;
+        }
+      }
+
+      a#anchor {
+        padding: 1rem 2rem;
+        @include regular-text();
+        background-color: $theme-color-2;
+        color: $theme-color;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: 0.25s ease;
+
+        &:hover {
+          background-color: $theme-color;
+          color: $theme-color-2;
+        }
+      }
+    }
+
+    .col-2 {
+      .blog-card {
+        display: grid;
+        grid-template-columns: 8rem auto;
+        gap: 1rem;
+
+        @include below-1200() {
+          gap: 0.5rem;
+        }
+
+        @include below-480() {
+          grid-template-columns: 4rem auto;
+        }
+
+        margin-bottom: 2rem;
+
+        img {
+          width: 100%;
+          height: 5rem;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 1rem;
+        }
+
+        a {
+          @include regular-text();
+          color: $dark-color;
+          font-weight: bold;
+          padding: 0.25rem;
+        }
+      }
+    }
+
+    .col-3 {
+      .contact-icon {
+        margin-bottom: 1rem;
+
+        display: grid;
+        grid-template-columns: 2rem auto;
+        gap: 1rem;
+
+        @include below-1200() {
+          gap: 0.25rem;
+        }
+
+        i {
+          color: $theme-color-2;
+          font-size: 1.5rem;
+        }
+        p {
+          @include regular-text();
+          color: $dark-color;
+        }
+      }
+
+      h4 {
+        font-size: 2rem;
+        @include font-playfair();
+        color: $theme-color;
+        margin-bottom: 1rem;
+
+        @include below-1200() {
+          font-size: 1.5rem;
+        }
+      }
+
+      .open-hours {
+        color: $dark-color;
+        @include regular-text();
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+section.credit {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-color;
+  color: $main-bg;
+  @include regular-text();
+  span {
+    color: $theme-color-2;
+  }
+
+  @include below-480() {
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
