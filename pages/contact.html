@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../stylings/main.css" />
+  </head>
+  <body>
+    <!-- Head section -->
+    <section class="top-most">
+      <div class="inner-container">
+        <p>Welcome to <span>ZBC Group Investment</span></p>
+        <div class="social-icons">
+          <a class="icon" href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a class="icon" href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a class="icon" href="#">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a class="icon" href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="logo-icons">
+      <div class="inner-container">
+        <img class="logo" src="../assets/logo-main.png" alt="logo" />
+        <div class="toggle" id="mobile-menu-toggle"></div>
+        <div class="icon-text">
+          <div class="single">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div class="texts">
+              <span>Requesting a Call</span>
+              <br />
+              <p>08012345678</p>
+            </div>
+          </div>
+          <div class="single">
+            <i class="fa-solid fa-clock"></i>
+            <div class="texts">
+              <span>Monday to Friday</span>
+              <br />
+              <p>8am - 5pm</p>
+            </div>
+          </div>
+          <div class="single">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="texts">
+              <span>No 19, Onike Street</span>
+              <br />
+              <p>Lagos Mainland, Lagos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="navigation">
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li>
+              <a href="#">Services</a>
+              <ul>
+                <li>
+                  <a href="#">Bureau De Change</a>
+                </li>
+                <li>
+                  <a href="#">Financial Asset Services</a>
+                </li>
+                <li>
+                  <a href="#">Arbitrage</a>
+                </li>
+                <li>
+                  <a href="#">Procurement</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">News & Media</a>
+            </li>
+            <li><a href="#">Contact</a></li>
+
+            <li class="">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <a class="appointment" href="#">
+        <span
+          >Book An Appointment<i class="fa-solid fa-arrow-right-long"></i>
+        </span>
+      </a>
+    </section>
+    <div class="mobile-menu" id="mobile-menu-panel">
+      <div class="close-icon">
+        <i class="fa-solid fa-xmark" id="close-icon-icon"></i>
+      </div>
+      <div class="spacer"></div>
+      <div class="logo">
+        <img src="../assets/logo-main.png" alt="mobile logo" />
+      </div>
+      <div class="spacer"></div>
+      <form id="mobile-search">
+        <input type="text" name="text" id="text" placeholder="Search..." />
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div class="spacer"></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li>
+            <a href="#">Services</a>
+            <ul>
+              <li>
+                <a href="#link-1">Bureau De Change</a>
+              </li>
+              <li>
+                <a href="#link-2">Financial Asset Services</a>
+              </li>
+              <li>
+                <a href="#link-3">Arbitrage</a>
+              </li>
+              <li>
+                <a href="#link-4">Procurement</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">News & Media</a>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="spacer"></div>
+      <div class="icon-text">
+        <div class="single">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div class="texts">
+            <span>Requesting a Call</span>
+            <br />
+            <p>08012345678</p>
+          </div>
+        </div>
+        <div class="single">
+          <i class="fa-solid fa-clock"></i>
+          <div class="texts">
+            <span>Monday to Friday</span>
+            <br />
+            <p>8am - 5pm</p>
+          </div>
+        </div>
+        <div class="single">
+          <i class="fa-solid fa-location-dot" id="location"></i>
+          <div class="texts">
+            <span>No 19, Onike Street</span>
+            <br />
+            <p>Lagos Mainland, Lagos</p>
+          </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <a class="appointment" href="#">
+        <span
+          >Book An Appointment<i class="fa-solid fa-arrow-right-long"></i>
+        </span>
+      </a>
+    </div>
+    <!-- Head section end -->
+
+    <!-- Body Section -->
+    <main class="page-content">
+      <!-- Hero Section -->
+      <section
+        class="hero-area"
+        style="background-image: url('../assets/contact-bg-img.jpg')"
+      >
+        <div class="overlay"></div>
+        <h1>Contact Us</h1>
+      </section>
+      <!-- Hero Section Ends -->
+
+      <!-- Contact details with form -->
+      <section class="contact-details">
+        <div class="inner-container">
+          <div class="details">
+            <div class="intro">
+              <hr />
+              <span class="section-intro">Contact Us</span>
+            </div>
+            <div class="spacer-1"></div>
+            <h2>If need any info, please contact <span>us!</span></h2>
+            <div class="spacer-2"></div>
+            <div class="icon-details">
+              <div class="single">
+                <div class="icon-container">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="texts">
+                  <span>Head office address: </span>
+                  <br />
+                  <p>Somewhere at Marina close to Lagos Mainland, Lagos</p>
+                </div>
+              </div>
+              <div class="spacer-3"></div>
+              <div class="single">
+                <div class="icon-container">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="texts">
+                  <span>Mail for information: </span>
+                  <br />
+                  <p>info@zbsgroup.com</p>
+                </div>
+              </div>
+              <div class="spacer-3"></div>
+              <div class="single">
+                <div class="icon-container">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+
+                <div class="texts">
+                  <span>Call for help:</span>
+                  <br />
+                  <p>08012345678</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form">Space for Contact Form</div>
+        </div>
+      </section>
+      <!-- Contact details with form -->
+
+      <!-- Google Map -->
+      <section class="google-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63427.14407168313!2d3.345646302924557!3d6.496788216950303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8cf3ea9e2d33%3A0xdc48a40ac59ed2a5!2sLagos%20Mainland%20101245%2C%20Lagos!5e0!3m2!1sen!2sng!4v1697030108216!5m2!1sen!2sng"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <!-- Google Map Ends -->
+    </main>
+    <!-- Body Section end -->
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="inner-container">
+        <div class="col-1">
+          <img src="../assets/logo-main.png" alt="main logo" />
+          <div class="spacer-1"></div>
+          <p class="about-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            voluptatem nesciunt mollitia velit cum pariatur obcaecati eligendi
+            modi totam?<br /><br />Totam aut libero ducimus nostrum, magnam
+            porro voluptatibus? Voluptates exercitationem veniam saepe tempor.
+          </p>
+          <div class="spacer-2"></div>
+          <a id="anchor" href="#">About Us</a>
+        </div>
+        <div class="col-2">
+          <h3>News & Media</h3>
+          <div class="spacer-0"></div>
+          <div class="blog-card">
+            <img src="../assets/stock.jpg" alt="Blog Image" />
+            <a href="#"
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Possimus, quas.</a
+            >
+          </div>
+          <div class="blog-card">
+            <img src="../assets/stock.jpg" alt="Blog Image" />
+            <a href="#"
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Possimus, quas.</a
+            >
+          </div>
+          <div class="blog-card">
+            <img src="../assets/stock.jpg" alt="Blog Image" />
+            <a href="#"
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Possimus, quas.</a
+            >
+          </div>
+        </div>
+        <div class="col-3">
+          <h3>Contact Info</h3>
+          <div class="spacer-0"></div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-location-dot" id="location"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, a!
+            </p>
+          </div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>+234 816 2554 278</p>
+          </div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <p>info@zbcgroup.com</p>
+          </div>
+          <h4>Open Hours</h4>
+          <p class="open-hours">Mon - Fri: 8 am - 5 pm,</p>
+          <p class="open-hours">Saturday - Sunday: CLOSED</p>
+        </div>
+      </div>
+    </footer>
+    <section class="credit">
+      <p>2023 © All rights reserved by <span>ZBC Group</span></p>
+    </section>
+    <!-- Footer Section end -->
+
+    <!-- Script -->
+    <script src="./index.js"></script>
+  </body>
+</html>
