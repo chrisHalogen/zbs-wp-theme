@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../stylings/main.css" />
+  </head>
+  <body>
+    <!-- Head section -->
+    <section class="top-most">
+      <div class="inner-container">
+        <p>Welcome to <span>ZBC Group Investment</span></p>
+        <div class="social-icons">
+          <a class="icon" href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a class="icon" href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a class="icon" href="#">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a class="icon" href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="logo-icons">
+      <div class="inner-container">
+        <img class="logo" src="../assets/logo-main.png" alt="logo" />
+        <div class="toggle" id="mobile-menu-toggle"></div>
+        <div class="icon-text">
+          <div class="single">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div class="texts">
+              <span>Requesting a Call</span>
+              <br />
+              <p>08012345678</p>
+            </div>
+          </div>
+          <div class="single">
+            <i class="fa-solid fa-clock"></i>
+            <div class="texts">
+              <span>Monday to Friday</span>
+              <br />
+              <p>8am - 5pm</p>
+            </div>
+          </div>
+          <div class="single">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="texts">
+              <span>No 19, Onike Street</span>
+              <br />
+              <p>Lagos Mainland, Lagos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="navigation">
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li>
+              <a href="#">Services</a>
+              <ul>
+                <li>
+                  <a href="#">Bureau De Change</a>
+                </li>
+                <li>
+                  <a href="#">Financial Asset Services</a>
+                </li>
+                <li>
+                  <a href="#">Arbitrage</a>
+                </li>
+                <li>
+                  <a href="#">Procurement</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">News & Media</a>
+            </li>
+            <li><a href="#">Contact</a></li>
+
+            <li class="">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <a class="appointment" href="#">
+        <span
+          >Book An Appointment<i class="fa-solid fa-arrow-right-long"></i>
+        </span>
+      </a>
+    </section>
+    <div class="mobile-menu" id="mobile-menu-panel">
+      <div class="close-icon">
+        <i class="fa-solid fa-xmark" id="close-icon-icon"></i>
+      </div>
+      <div class="spacer"></div>
+      <div class="logo">
+        <img src="../assets/logo-main.png" alt="mobile logo" />
+      </div>
+      <div class="spacer"></div>
+      <form id="mobile-search">
+        <input type="text" name="text" id="text" placeholder="Search..." />
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div class="spacer"></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li>
+            <a href="#">Services</a>
+            <ul>
+              <li>
+                <a href="#link-1">Bureau De Change</a>
+              </li>
+              <li>
+                <a href="#link-2">Financial Asset Services</a>
+              </li>
+              <li>
+                <a href="#link-3">Arbitrage</a>
+              </li>
+              <li>
+                <a href="#link-4">Procurement</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">News & Media</a>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="spacer"></div>
+      <div class="icon-text">
+        <div class="single">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div class="texts">
+            <span>Requesting a Call</span>
+            <br />
+            <p>08012345678</p>
+          </div>
+        </div>
+        <div class="single">
+          <i class="fa-solid fa-clock"></i>
+          <div class="texts">
+            <span>Monday to Friday</span>
+            <br />
+            <p>8am - 5pm</p>
+          </div>
+        </div>
+        <div class="single">
+          <i class="fa-solid fa-location-dot" id="location"></i>
+          <div class="texts">
+            <span>No 19, Onike Street</span>
+            <br />
+            <p>Lagos Mainland, Lagos</p>
+          </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <a class="appointment" href="#">
+        <span
+          >Book An Appointment<i class="fa-solid fa-arrow-right-long"></i>
+        </span>
+      </a>
+    </div>
+    <!-- Head section end -->
+
+    <!-- Body Section -->
+    <main class="page-content">
+      <!-- Hero Section -->
+      <section
+        class="hero-area"
+        style="background-image: url('../assets/about.jpg')"
+      >
+        <div class="overlay"></div>
+        <h1>About</h1>
+      </section>
+      <!-- Hero Section Ends -->
+
+      <!-- About Details -->
+      <section class="about-section">
+        <div class="inner-container">
+          <div class="text">
+            <div class="intro">
+              <hr />
+              <span class="section-intro">About Us</span>
+            </div>
+            <div class="spacer"></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Reprehenderit illum impedit cumque, error, voluptates, molestias a
+              dolorum explicabo delectus aperiam mollitia numquam officiis natus
+              veritatis suscipit animi recusandae. Eos enim, vero sed nobis
+              harum sint quasi labore iure nesciunt? Incidunt, a inventore
+              voluptas totam at assumenda commodi error vero sequi.<br /><br />Lorem
+              ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit
+              illum impedit cumque, error, voluptates, molestias a dolorum
+              explicabo delectus aperiam mollitia numquam officiis natus
+              veritatis suscipit animi recusandae. Eos enim, vero sed nobis
+              harum sint quasi labore iure nesciunt? Incidunt, a inventore
+              voluptas totam at assumenda commodi error vero sequi.<br /><br />Lorem
+              ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit
+              illum impedit cumque, error, voluptates, molestias a dolorum
+              explicabo delectus aperiam mollitia numquam officiis natus
+              veritatis suscipit animi recusandae. Eos enim, vero sed nobis
+              harum sint quasi labore iure nesciunt? Incidunt, a inventore
+              voluptas totam at assumenda commodi error vero sequi.
+            </p>
+          </div>
+          <div class="values">
+            <div class="overlay"></div>
+            <div class="inner">
+              <div class="intro">
+                <hr />
+                <span class="section-intro">Our Core Values</span>
+              </div>
+              <div class="bullet">
+                <i class="fa-solid fa-square-check"></i> Integrity
+              </div>
+              <div class="bullet">
+                <i class="fa-solid fa-square-check"></i> Team Work
+              </div>
+              <div class="bullet">
+                <i class="fa-solid fa-square-check"></i> Excellence
+              </div>
+              <div class="bullet">
+                <i class="fa-solid fa-square-check"></i> Enthusiazm
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-mision-vision">
+        <div class="inner-container">
+          <div class="grid">
+            <div class="mission">
+              <i class="fa-solid fa-eye"></i>
+              <h3>Our Mission</h3>
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                suscipit sed dolore quibusdam obcaecati porro?</span
+              >
+            </div>
+            <div class="vision">
+              <i class="fa-solid fa-rocket"></i>
+              <h3>Our Vision</h3>
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                suscipit sed dolore quibusdam obcaecati porro?</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bod">
+        <div class="inner-container">
+          <div class="intro">
+            <hr />
+            <span class="section-intro">Board of Directors</span>
+          </div>
+          <p class="bod-intro">
+            Our team of experts has years of experience in forex trading and the
+            financial markets.
+          </p>
+          <div class="bod-tabs">
+            <div class="names">
+              <div class="executive active">
+                <p class="name">Dr. Kayode Henry</p>
+                <span class="role">Chief Executive Officer</span>
+              </div>
+              <div class="executive">
+                <p class="name">Dr. Martins Olatunji</p>
+                <span class="role">Managing Director</span>
+              </div>
+              <div class="executive">
+                <p class="name">Dr. Ismail Alexander</p>
+                <span class="role">Sales Manager</span>
+              </div>
+            </div>
+            <div class="about-name">
+              <p class="executive-details active">
+                About Dr Henry. Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. A nesciunt ullam aspernatur hic error ex modi
+                neque unde similique maiores vel eum distinctio reiciendis
+                soluta expedita natus est, quas adipisci inventore consectetur
+                commodi facilis. Nulla, officia voluptatem ex laudantium
+                blanditiis omnis quod perspiciatis consequatur ut porro
+                reiciendis? Eaque, perspiciatis voluptatum.
+              </p>
+              <p class="executive-details">
+                About Dr Martins. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Delectus, rerum atque velit, perferendis earum
+                aperiam deleniti dolor itaque reprehenderit repellendus eaque
+                exercitationem vero totam, iure vel quo ad obcaecati quisquam.
+                Delectus, ratione asperiores, magnam doloremque similique neque
+                cumque ex ut, eius nihil odio hic quas dolorum doloribus
+                nesciunt blanditiis totam ea veritatis. Quidem, debitis
+                voluptatum voluptate perferendis neque iste itaque ipsa saepe,
+                vel nemo illo, tempore quia placeat? Eveniet nesciunt nulla
+                dolores doloribus? Est quae iste sed quod consequatur voluptates
+                modi fuga aut animi deleniti nam ipsa minus quia placeat at
+                obcaecati ducimus in, explicabo ea incidunt officiis rem ipsam!
+              </p>
+              <p class="executive-details">
+                About Dr Alexander. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Fugit, inventore, illum tenetur vero quibusdam
+                dicta quisquam doloribus ab ipsum neque aliquid enim labore
+                sapiente perspiciatis magnam officia quas. Eaque illum, dolorem
+                maiores eos dolores accusantium laboriosam eum officia? Autem
+                quaerat, assumenda cupiditate repellendus quasi modi laudantium
+                aspernatur ut maxime ratione nesciunt similique facere magni
+                necessitatibus totam debitis fugit temporibus sapiente? Iste
+                reprehenderit quaerat corporis aut est exercitationem dolore
+                alias accusamus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact details with form -->
+    </main>
+    <!-- Body Section end -->
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="inner-container">
+        <div class="col-1">
+          <img src="../assets/logo-main.png" alt="main logo" />
+          <div class="spacer-1"></div>
+          <p class="about-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            voluptatem nesciunt mollitia velit cum pariatur obcaecati eligendi
+            modi totam?<br /><br />Totam aut libero ducimus nostrum, magnam
+            porro voluptatibus? Voluptates exercitationem veniam saepe tempor.
+          </p>
+          <div class="spacer-2"></div>
+          <a id="anchor" href="#">About Us</a>
+        </div>
+        <div class="col-2">
+          <h3>News & Media</h3>
+          <div class="spacer-0"></div>
+          <div class="blog-card">
+            <img src="../assets/stock.jpg" alt="Blog Image" />
+            <a href="#"
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Possimus, quas.</a
+            >
+          </div>
+          <div class="blog-card">
+            <img src="../assets/stock.jpg" alt="Blog Image" />
+            <a href="#"
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Possimus, quas.</a
+            >
+          </div>
+          <div class="blog-card">
+            <img src="../assets/stock.jpg" alt="Blog Image" />
+            <a href="#"
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Possimus, quas.</a
+            >
+          </div>
+        </div>
+        <div class="col-3">
+          <h3>Contact Info</h3>
+          <div class="spacer-0"></div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-location-dot" id="location"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, a!
+            </p>
+          </div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>+234 816 2554 278</p>
+          </div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <p>info@zbcgroup.com</p>
+          </div>
+          <h4>Open Hours</h4>
+          <p class="open-hours">Mon - Fri: 8 am - 5 pm,</p>
+          <p class="open-hours">Saturday - Sunday: CLOSED</p>
+        </div>
+      </div>
+    </footer>
+    <section class="credit">
+      <p>2023 © All rights reserved by <span>ZBC Group</span></p>
+    </section>
+    <!-- Footer Section end -->
+
+    <!-- Script -->
+    <script src="../index.js"></script>
+  </body>
+</html>

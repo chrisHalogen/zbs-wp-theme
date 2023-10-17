@@ -37,7 +37,7 @@ if (document.getElementById("blog-post-news")) {
 
   for (let index = 0; index < blog_excerpts.length; index++) {
     const element = blog_excerpts[index];
-    $clamp(element, { clamp: 6 });
+    $clamp(element, { clamp: 4 });
   }
 
   // Rotating Blog Images
@@ -103,23 +103,91 @@ if (document.getElementById("blog-post-news")) {
 }
 
 if (document.getElementById("sidebar-content")) {
-  let sidebar = document.getElementsByClassName("sidebar")[0];
-  let sidebar_content = document.getElementsByClassName("sidebar-content")[0];
+  if (window.matchMedia("(min-width: 901px)").matches) {
+    let sidebar = new StickySidebar("#right-sidebar", {
+      containerSelector: ".inner-container",
+      innerWrapperSelector: ".sidebar-content",
+      topSpacing: 60,
+      bottomSpacing: 60,
+    });
+  }
+}
 
-  window.onscroll = () => {
-    let scrollTop = window.scrollY; // current scroll position
-    let viewportHeight = window.innerHeight; //viewport height
-    let contentHeight = sidebar_content.getBoundingClientRect().height; // current content height
-    let sidebarTop = sidebar.getBoundingClientRect().top + window.pageYOffset; //distance from top to sidebar
+if (document.getElementsByClassName("bod-tabs")[0]) {
+  let executives = document.getElementsByClassName("executive");
+  let details = document.getElementsByClassName("executive-details");
 
-    // if (scrollTop >= contentHeight - viewportHeight + sidebarTop) {
-    //   sidebar_content.style.transform = `translateY(-${
-    //     contentHeight - viewportHeight + sidebarTop
-    //   }px)`;
-    //   sidebar_content.style.position = "fixed";
-    // } else {
-    //   sidebar_content.style.transform = "";
-    //   sidebar_content.style.position = "";
-    // }
-  };
+  function openContent(count) {
+    // Hide all details
+    for (let index = 0; index < details.length; index++) {
+      const element = details[index];
+      element.classList.remove("active");
+    }
+
+    // Get all elements with class="executive" and remove the class "active"
+    for (let index = 0; index < executives.length; index++) {
+      const element = executives[index];
+      element.classList.remove("active");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    executives[count].classList.add("active");
+    details[count].classList.add("active");
+  }
+
+  for (let count = 0; count < executives.length; count++) {
+    executives[count].addEventListener("click", function () {
+      openContent(count);
+    });
+  }
+}
+
+if (document.getElementById("hero-slider")) {
+  const myslide = document.querySelectorAll(".myslide"),
+    dot = document.querySelectorAll(".dot");
+  let counter = 1;
+
+  slidefun(counter);
+
+  let timer = setInterval(autoSlide, 8000);
+
+  function autoSlide() {
+    counter += 1;
+    slidefun(counter);
+  }
+
+  function plusSlides(n) {
+    counter += n;
+    slidefun(counter);
+    resetTimer();
+  }
+
+  function currentSlide(n) {
+    counter = n;
+    slidefun(counter);
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(autoSlide, 8000);
+  }
+
+  function slidefun(n) {
+    let i;
+    for (i = 0; i < myslide.length; i++) {
+      myslide[i].style.display = "none";
+    }
+    for (i = 0; i < dot.length; i++) {
+      dot[i].className = dot[i].className.replace(" active", "");
+    }
+    if (n > myslide.length) {
+      counter = 1;
+    }
+    if (n < 1) {
+      counter = myslide.length;
+    }
+    myslide[counter - 1].style.display = "block";
+    dot[counter - 1].className += " active";
+  }
 }
