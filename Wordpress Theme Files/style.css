@@ -1,0 +1,21 @@
+/*!
+Theme Name: zbs-co-theme
+Theme URI: http://github.com/chrishalogen
+Author: Chris Halogen
+Author URI: http://github.com/chrishalogen
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: zbs-co-theme
+
+
+ * 1. Reset all paddings and margins
+ */
+ * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
